@@ -1,0 +1,10 @@
+D:\Learning\GitHub\DAWEB25\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Learning\GitHub\DAWEB25\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Learning\GitHub\DAWEB25\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Learning\GitHub\DAWEB25\BusinessLogic\bin\Debug\SubSonic.dll
+D:\Learning\GitHub\DAWEB25\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\Business.CF5D6E35.Up2Date
+D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.pdb

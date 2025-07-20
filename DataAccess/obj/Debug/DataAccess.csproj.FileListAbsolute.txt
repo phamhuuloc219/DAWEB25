@@ -1,0 +1,8 @@
+D:\Learning\GitHub\DAWEB25\DataAccess\bin\Debug\DataAccess.dll
+D:\Learning\GitHub\DAWEB25\DataAccess\bin\Debug\DataAccess.pdb
+D:\Learning\GitHub\DAWEB25\DataAccess\bin\Debug\SubSonic.dll
+D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
+D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.dll
+D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.pdb
