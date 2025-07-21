@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="WebAdmin.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8" />
+    <meta http-equiv="content-type" content="application/xhtml+xml" charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <title>Đăng nhập </title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <%-- Tell the browser to be responsive to screen width --%>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="theme-color" content="#2c0153" />
+
+    <link id="ImageLinkShare" runat="server" rel="image_src" type="image/png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" runat="server" id="ogTitle" />
+    <meta property="og:description" runat="server" id="ogDescription" />
+    <meta property="og:url" runat="server" id="ogUrl" />
+    <meta property="og:image" runat="server" id="ogImage" />
+    <meta property="og:image:alt" runat="server" id="ogImageAlt" />
+    <meta property="og:type" content='website' />
+    <meta property="og:site_name" runat="server" />
+
+    <%--Twitter--%>
+    <meta name="twitter:card" runat="server" content="summary" />
+    <meta name="twitter:url" runat="server" id="twUrl" />
+    <meta name="twitter:title" runat="server" id="twTitle" />
+    <meta name="twitter:description" runat="server" id="twDescription" />
+    <meta name="twitter:image" runat="server" id="twImage" />
+    <%--End twitter--%>
+
+    <link rel="stylesheet" type="text/css" href="/Styles/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/icon.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/Boxicon.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/custom.css" />
+
+    <asp:ContentPlaceHolder ID="cpHead" runat="server"></asp:ContentPlaceHolder>
+
+    <style>
+        .help-block {
+            color: red;
+            /*font-size: 10pt;*/
+            font-style: italic;
+        }
+
+        .btn {
+            font-size: 16px;
+        }
+
+        .form-control {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body runat="server" id="body" data-layout="horizontal" data-font="Nunito" data-color="color-1" data-style="google">
+    <form runat="server" id="aspnet">
+        <asp:ScriptManager runat="server" ID="scriptMain"></asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="cpHeaderSection" runat="server"></asp:ContentPlaceHolder>
+
+        <div class="wrapper-login-page">
+            <div class="wrapper-login-form-center">
+                <div class="wrapper-form-container">
+                    <div class="wrapper-content">
+                        <div class="wrapper-logo">
+                            <img src="/images/logo-dark.svg" style="width: 100%; margin-left: 0%">
+                        </div>
+                        <asp:UpdatePanel runat="server" ID="upnLogin" UpdateMode="Conditional">
+                            <ContentTemplate>
+                                <asp:ContentPlaceHolder ID="cpMain" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder runat="server" ID="cpVendorScript"></asp:ContentPlaceHolder>
+
+
+        <!-- JS-->
+        <script src="/Styles/js/jquery.js"></script>
+        <script src="/Styles/js/boostrap.js"></script>
+        <script src="/Styles/js/box-icon.js"></script>
+        <script src="/Styles/js/custom.js"></script>
+        <script src="/Styles/plugins/input_mask/jquery.inputmask.bundle.js"></script>
+        <!-- end JS-->
+        <asp:ContentPlaceHolder ID="cpBottomScript" runat="server"></asp:ContentPlaceHolder>
+
+       <script>
+            function showPass() {
+                $(".showPass").click(function () {
+                    let myPass = $($(this).closest('.groupPass').find('.myPass'));
+                    if (myPass.attr("type") == "password") {
+                        myPass.attr("type", "text");
+                    } else {
+                        myPass.attr("type", "password");
+                    }
+                });
+            }
+
+            function hidePass() {
+                $(".showPass").click(function () {
+                    $($(this).find('i')).toggle();
+                });
+            }
+
+            function AddEndRequest(functionName) {
+                if (typeof Sys !== 'undefined' && typeof Sys.WebForms.PageRequestManager !== 'undefined')
+                    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(window[functionName]);
+            }
+
+            showPass();
+            hidePass();
+            AddEndRequest('showPass');
+            AddEndRequest('hidePass');
+
+       </script>
+    </form>
+</body>
+</html>
+
