@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebAdmin.Main" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8" />
+    <meta http-equiv="content-type" content="application/xhtml+xml" charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Trang chủ </title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <%-- Tell the browser to be responsive to screen width --%>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="theme-color" content="#2c0153" />
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" runat="server" id="ogTitle" />
+    <meta property="og:description" runat="server" id="ogDescription" />
+    <meta property="og:url" runat="server" id="ogUrl" />
+    <meta property="og:image" runat="server" id="ogImage" />
+    <meta property="og:image:alt" runat="server" id="ogImageAlt" />
+    <meta property="og:type" content='website' />
+    <meta property="og:site_name" runat="server" />
+
+    <%--Twitter--%>
+    <meta name="twitter:card" runat="server" content="summary" />
+    <meta name="twitter:url" runat="server" id="twUrl" />
+    <meta name="twitter:title" runat="server" id="twTitle" />
+    <meta name="twitter:description" runat="server" id="twDescription" />
+    <meta name="twitter:image" runat="server" id="twImage" />
+    <%--End twitter--%>
+
+
+    <link rel="stylesheet" type="text/css" href="/Styles/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/icon.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/boxIcon.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/css/custom.css" />
+
+    <asp:ContentPlaceHolder ID="cpHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body runat="server" id="body" data-layout="horizontal" data-font="Nunito" data-color="color-1" data-style="ios">
+    <form id="aspnet" runat="server">
+        <asp:ScriptManager runat="server" ID="scriptMain"></asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="cpHeaderSection" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="cpMain" runat="server"></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder runat="server" ID="cpVendorScript"></asp:ContentPlaceHolder>
+
+        <!-- JS-->
+        <script src="/Styles/js/boostrap.js"></script>
+
+        <script src="/Styles/js/box-icon.js"></script>
+        <!-- end JS-->
+
+        <asp:ContentPlaceHolder ID="cpBottomScript" runat="server"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
