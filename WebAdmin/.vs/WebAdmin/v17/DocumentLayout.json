@@ -3,18 +3,38 @@
   "WorkspaceRootPath": "D:\\Github\\DAWEB25\\WebAdmin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|D:\\Github\\DAWEB25\\WebAdmin\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\github\\daweb25\\webadmin\\login.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:login.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|D:\\Github\\DAWEB25\\WebAdmin\\login.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:login.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\github\\daweb25\\webadmin\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\github\\daweb25\\webadmin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\github\\daweb25\\webadmin\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\github\\daweb25\\webadmin\\login.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:login.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3709DBC9-0615-4297-BABB-67B1960D27A0}|..\\Web\\Web.csproj|d:\\github\\daweb25\\web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3709DBC9-0615-4297-BABB-67B1960D27A0}|..\\Web\\Web.csproj|d:\\github\\daweb25\\web\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|D:\\Github\\DAWEB25\\WebAdmin\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|D:\\Github\\DAWEB25\\WebAdmin\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Learning\\GitHub\\DAWEB25\\Web\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
@@ -27,8 +47,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 42,
+          "SelectedChildIndex": 49,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.Master",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master",
+              "RelativeDocumentMoniker": "Login.Master",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master",
+              "RelativeToolTip": "Login.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-22T10:10:29.189Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -199,20 +232,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "D:\\Github\\DAWEB25\\Web\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "..\\Web\\App_Start\\RouteConfig.cs",
-              "ToolTip": "D:\\Github\\DAWEB25\\Web\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "..\\Web\\App_Start\\RouteConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
+              "DocumentIndex": 5,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Default.aspx.cs",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Default.aspx.cs",
+              "RelativeToolTip": "Default.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:54:02.833Z",
+              "WhenOpened": "2025-07-22T10:52:12.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Login.aspx.cs",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Login.aspx.cs",
+              "RelativeToolTip": "Login.aspx.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T10:24:02.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Login.aspx",
+              "RelativeDocumentMoniker": "Login.aspx",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Login.aspx",
+              "RelativeToolTip": "Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-22T10:17:18.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.Master.designer.cs",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master.designer.cs",
+              "RelativeDocumentMoniker": "Login.Master.designer.cs",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master.designer.cs",
+              "RelativeToolTip": "Login.Master.designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAawLMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T16:14:17.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.Master.cs",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master.cs",
+              "RelativeDocumentMoniker": "Login.Master.cs",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Login.Master.cs",
+              "RelativeToolTip": "Login.Master.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAawAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T16:14:04.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Site.Master",
               "DocumentMoniker": "D:\\Github\\DAWEB25\\Web\\Site.Master",
               "RelativeDocumentMoniker": "..\\Web\\Site.Master",
@@ -224,19 +309,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Site.Master",
-              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Site.Master",
-              "RelativeDocumentMoniker": "Site.Master",
-              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Site.Master",
-              "RelativeToolTip": "Site.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-07-21T15:53:06.084Z"
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAiwBoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-20T13:55:42.338Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "D:\\Github\\DAWEB25\\Web\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "..\\Web\\App_Start\\RouteConfig.cs",
+              "ToolTip": "D:\\Github\\DAWEB25\\Web\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "..\\Web\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T15:54:02.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Web.config",
               "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\Web\\Web.config",
               "RelativeDocumentMoniker": "..\\..\\..\\Learning\\GitHub\\DAWEB25\\Web\\Web.config",
@@ -244,18 +342,6 @@
               "RelativeToolTip": "..\\..\\..\\Learning\\GitHub\\DAWEB25\\Web\\Web.config",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-07-20T13:55:52.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Github\\DAWEB25\\WebAdmin\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "D:\\Github\\DAWEB25\\WebAdmin\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-20T13:55:42.338Z"
             }
           ]
         },

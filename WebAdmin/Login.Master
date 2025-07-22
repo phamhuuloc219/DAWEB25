@@ -71,12 +71,14 @@
                         <div class="wrapper-logo">
                             <img src="/images/logo-dark.svg" style="width: 100%; margin-left: 0%">
                         </div>
-                        <asp:UpdatePanel runat="server" ID="upnLogin" UpdateMode="Conditional">
+                        <%-- <asp:UpdatePanel runat="server" ID="upnLogin" UpdateMode="Conditional">
                             <ContentTemplate>
                                 <asp:ContentPlaceHolder ID="cpMain" runat="server">
                                 </asp:ContentPlaceHolder>
                             </ContentTemplate>
-                        </asp:UpdatePanel>
+                        </asp:UpdatePanel>  --%>
+                        <asp:ContentPlaceHolder ID="cpMain" runat="server" />
+
                     </div>
                 </div>
             </div>

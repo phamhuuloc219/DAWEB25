@@ -44,3 +44,12 @@ CREATE TABLE CTDH (
     FOREIGN KEY (MaDH) REFERENCES DonHang(MaDH),
     FOREIGN KEY (MaMH) REFERENCES MatHang(MaMH)
 );
+
+CREATE TABLE AdminUsers (
+    Id INT IDENTITY PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(50) NOT NULL
+);
+INSERT INTO AdminUsers (Username, Password)
+VALUES ('admin', '123456');
+
