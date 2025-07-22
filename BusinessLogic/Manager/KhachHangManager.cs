@@ -35,7 +35,10 @@ namespace BusinessLogic
                 .Execute();
         }
 
-
+        public static KhachHang GetKhachHangById(Guid id)
+        {
+            return new Select().From(KhachHang.Schema.TableName).Where(KhachHang.Columns.MaKH).IsEqualTo(id).ExecuteSingle<KhachHang>();
+        }
 
         public static void DeleteKhachHang(string maKH)
         {

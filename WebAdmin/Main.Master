@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" runat="server" href="~/Public/dist/css/adminlte.min.css">
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     <style>
         .truncate-text {
             max-width: 250px;
@@ -282,11 +285,19 @@
         </div>
 
         <!-- REQUIRED SCRIPTS -->
-    </form>
+    </form> 
 </body>
 <script src="<%= ResolveUrl("~/Public/plugins/jquery/jquery.min.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/plugins/bootstrap/js/bootstrap.bundle.min.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/dist/js/adminlte.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/dist/js/demo.js") %>"></script>
-<script src="<%= ResolveUrl("~/Public/dist/js/pages/dashboard3.js") %>"></script>
+<script src="<%= ResolveUrl("~/Public/dist/js/pages/dashboard3.js") %>"></script><!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right"
+    };
+</script>
 </html>

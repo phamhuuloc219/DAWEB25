@@ -19,17 +19,14 @@
         <div class="container-fluid">
             <div class="card card-primary card-outline mt-3">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="card-title text-primary">📋 Quản lý khách hàng</h3>
-                    <asp:Button ID="btnShowModal" runat="server" Text="➕ Thêm khách hàng mới" CssClass="btn btn-success"
+                    <h3 class="card-title text-primary">Quản lý khách hàng</h3>
+                    <asp:Button ID="btnShowModal" runat="server" Text="Thêm mới" CssClass="btn btn-success"
                         OnClientClick="showModal(); return false;" />
                 </div>
 
                 <div class="card-body">
                     <asp:GridView ID="gvKhachHang" runat="server" AutoGenerateColumns="False"
                         DataKeyNames="MaKH"
-                        OnRowEditing="gvKhachHang_RowEditing"
-                        OnRowUpdating="gvKhachHang_RowUpdating"
-                        OnRowCancelingEdit="gvKhachHang_RowCancelingEdit"
                         OnRowDeleting="gvKhachHang_RowDeleting"
                         CssClass="table table-bordered table-hover">
                         <Columns>
@@ -37,40 +34,42 @@
                                 <ItemTemplate>
                                     <%# Eval("TenKH") %>
                                 </ItemTemplate>
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="txtEditTenKH" runat="server" Text='<%# Bind("TenKH") %>' CssClass="form-control" />
-                                </EditItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="SĐT">
+                            <asp:TemplateField HeaderText="Số điện thoại">
                                 <ItemTemplate>
                                     <%# Eval("DienThoai") %>
                                 </ItemTemplate>
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="txtEditSDT" runat="server" Text='<%# Bind("DienThoai") %>' CssClass="form-control" />
-                                </EditItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Email">
                                 <ItemTemplate>
                                     <%# Eval("Email") %>
                                 </ItemTemplate>
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="txtEditEmail" runat="server" Text='<%# Bind("Email") %>' CssClass="form-control" />
-                                </EditItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Địa chỉ">
                                 <ItemTemplate>
                                     <%# Eval("DiaChi") %>
                                 </ItemTemplate>
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="txtEditDiaChi" runat="server" Text='<%# Bind("DiaChi") %>' CssClass="form-control" />
-                                </EditItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+                            <asp:TemplateField HeaderText="Thao tác">
+                                <ItemTemplate>
+                                    <a href='<%# Eval("MaKH", "ChiTietKhachHang.aspx?id={0}") %>' title="Sửa" class="text-primary mr-2">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+
+                                    <asp:LinkButton ID="btnDelete" runat="server" CommandName="Delete"
+                                        CommandArgument='<%# Eval("MaKH") %>' CssClass="text-danger"
+                                        OnClientClick="return confirm('Bạn có chắc muốn xoá khách hàng này?');"
+                                        ToolTip="Xoá">
+                                         <i class="fas fa-trash-alt"></i>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
+
                     </asp:GridView>
 
                 </div>
@@ -98,6 +97,9 @@
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtDiaChi" runat="server" CssClass="form-control" Placeholder="Địa chỉ" />
+                        </div>
+                        <div class="form-group">
+                            <label style="color: red; font-style: italic">* Mật khẩu mặc định là "123456789"</label>
                         </div>
                     </div>
                     <div class="modal-footer">

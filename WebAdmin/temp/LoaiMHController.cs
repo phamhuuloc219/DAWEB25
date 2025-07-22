@@ -80,11 +80,13 @@ namespace CMS.DataAccess
 	    /// Inserts a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Insert, true)]
-	    public void Insert(Guid MaLMH,string TenLMH)
+	    public void Insert(Guid MaLMH,string MoTaLMH,string TenLMH)
 	    {
 		    LoaiMH item = new LoaiMH();
 		    
             item.MaLMH = MaLMH;
+            
+            item.MoTaLMH = MoTaLMH;
             
             item.TenLMH = TenLMH;
             
@@ -96,13 +98,15 @@ namespace CMS.DataAccess
 	    /// Updates a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Update, true)]
-	    public void Update(Guid MaLMH,string TenLMH)
+	    public void Update(Guid MaLMH,string MoTaLMH,string TenLMH)
 	    {
 		    LoaiMH item = new LoaiMH();
 	        item.MarkOld();
 	        item.IsLoaded = true;
 		    
 			item.MaLMH = MaLMH;
+				
+			item.MoTaLMH = MoTaLMH;
 				
 			item.TenLMH = TenLMH;
 				
