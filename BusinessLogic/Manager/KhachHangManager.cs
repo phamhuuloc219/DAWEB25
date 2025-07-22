@@ -31,6 +31,7 @@ namespace BusinessLogic
                 .Set(KhachHang.Columns.DienThoai).EqualTo(khachHang.DienThoai)
                 .Set(KhachHang.Columns.Email).EqualTo(khachHang.Email)
                 .Set(KhachHang.Columns.DiaChi).EqualTo(khachHang.DiaChi)
+                .Set(KhachHang.Columns.MatKhau).EqualTo(khachHang.MatKhau)
                 .Where(KhachHang.Columns.MaKH).IsEqualTo(khachHang.MaKH)
                 .Execute();
         }

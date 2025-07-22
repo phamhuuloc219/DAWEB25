@@ -38,7 +38,7 @@ namespace WebAdmin
                     Session["Admin"] = user.Username;
                     Response.Redirect("~/Default.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
-                    username = password = string.Empty;
+                    txtUsername.Text = txtPassword.Text = string.Empty;
                 }
                 else
                 {

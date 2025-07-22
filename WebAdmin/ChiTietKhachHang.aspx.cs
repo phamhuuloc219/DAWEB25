@@ -72,6 +72,7 @@ namespace WebAdmin
                         else
                         {
                             lbNoti.Text = "Mật khẩu phải lớn hơn 8 ký tự";
+                            return;
                         }
                     }
                 }
