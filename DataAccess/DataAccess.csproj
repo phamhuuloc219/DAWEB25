@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUser.cs" />
+    <Compile Include="AdminUserController.cs" />
     <Compile Include="AllStructs.cs" />
     <Compile Include="Ctdh.cs" />
     <Compile Include="CtdhController.cs" />

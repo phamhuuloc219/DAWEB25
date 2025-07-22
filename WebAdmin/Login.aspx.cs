@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogic;
+using CMS.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -13,34 +15,39 @@ namespace WebAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblError.Text = "";
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
-
-            string connStr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(connStr))
+            try
             {
-                conn.Open();
-                string query = "SELECT COUNT(*) FROM AdminUsers WHERE Username=@u AND Password=@p";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@u", username);
-                cmd.Parameters.AddWithValue("@p", password);
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
 
-                int count = (int)cmd.ExecuteScalar();
-
-                if (count == 1)
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    Session["Admin"] = username;
-                    Response.Redirect("Default.aspx");
+                    lblError.Text = "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu.";
+                    return;
+                }
+
+                AdminUser user = KhachHangManager.Login(username, password);
+
+                if (user != null)
+                {
+                    Session["Admin"] = user.Username;
+                    Response.Redirect("~/Default.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
+                    username = password = string.Empty;
                 }
                 else
                 {
-                    lblError.Text = "Tài khoản hoặc mật khẩu không đúng!";
+                    lblError.Text = "Tên đăng nhập hoặc mật khẩu không đúng.";
                 }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }

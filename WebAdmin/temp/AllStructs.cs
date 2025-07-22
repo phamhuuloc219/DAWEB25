@@ -18,6 +18,8 @@ namespace CMS.DataAccess
 	public partial struct Tables
 	{
 		
+		public static readonly string AdminUser = @"AdminUsers";
+        
 		public static readonly string Ctdh = @"CTDH";
         
 		public static readonly string DonHang = @"DonHang";
@@ -33,6 +35,11 @@ namespace CMS.DataAccess
     #region Schemas
     public partial class Schemas {
 		
+		public static TableSchema.Table AdminUser
+		{
+            get { return DataService.GetSchema("AdminUsers", "DataAcessProvider"); }
+		}
+        
 		public static TableSchema.Table Ctdh
 		{
             get { return DataService.GetSchema("CTDH", "DataAcessProvider"); }

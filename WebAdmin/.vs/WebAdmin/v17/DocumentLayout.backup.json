@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\learning\\github\\daweb25\\webadmin\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\learning\\github\\daweb25\\webadmin\\khachhang.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:khachhang.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3709DBC9-0615-4297-BABB-67B1960D27A0}|..\\Web\\Web.csproj|d:\\learning\\github\\daweb25\\web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\learning\\github\\daweb25\\webadmin\\khachhang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:khachhang.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612630E5-7E2C-47D0-99CB-173D1645F10D}|..\\BusinessLogic\\BusinessLogic.csproj|d:\\learning\\github\\daweb25\\businesslogic\\manager\\khachhangmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\learning\\github\\daweb25\\webadmin\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|d:\\learning\\github\\daweb25\\webadmin\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7154398-00B9-4393-8FED-88584E618F47}|WebAdmin.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +33,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 40,
+          "SelectedChildIndex": 39,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -157,10 +177,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -177,28 +193,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\Web\\Web.config",
-              "RelativeDocumentMoniker": "..\\Web\\Web.config",
-              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\Web\\Web.config",
-              "RelativeToolTip": "..\\Web\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-20T13:55:52.442Z",
+              "DocumentIndex": 0,
+              "Title": "KhachHang.aspx.cs",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\KhachHang.aspx.cs",
+              "RelativeDocumentMoniker": "KhachHang.aspx.cs",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\KhachHang.aspx.cs",
+              "RelativeToolTip": "KhachHang.aspx.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAiwGQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T12:54:16.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-07-20T13:55:42.338Z",
+              "DocumentIndex": 1,
+              "Title": "KhachHang.aspx",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\KhachHang.aspx",
+              "RelativeDocumentMoniker": "KhachHang.aspx",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\KhachHang.aspx",
+              "RelativeToolTip": "KhachHang.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-22T12:52:36.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhachHangManager.cs",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\BusinessLogic\\Manager\\KhachHangManager.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLogic\\Manager\\KhachHangManager.cs",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\BusinessLogic\\Manager\\KhachHangManager.cs",
+              "RelativeToolTip": "..\\BusinessLogic\\Manager\\KhachHangManager.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T12:49:29.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "Default.aspx.cs",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Default.aspx.cs",
+              "RelativeToolTip": "Default.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T12:40:18.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.Master",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Main.Master",
+              "RelativeDocumentMoniker": "Main.Master",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Main.Master",
+              "RelativeToolTip": "Main.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-21T12:30:55.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Default.aspx",
+              "RelativeDocumentMoniker": "Default.aspx",
+              "ToolTip": "D:\\Learning\\GitHub\\DAWEB25\\WebAdmin\\Default.aspx",
+              "RelativeToolTip": "Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-22T12:40:12.978Z",
               "EditorCaption": ""
             }
           ]
