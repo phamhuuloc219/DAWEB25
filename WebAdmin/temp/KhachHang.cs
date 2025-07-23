@@ -178,6 +178,19 @@ namespace CMS.DataAccess
 				colvarEmail.ForeignKeyTableName = "";
 				schema.Columns.Add(colvarEmail);
 				
+				TableSchema.TableColumn colvarMatKhau = new TableSchema.TableColumn(schema);
+				colvarMatKhau.ColumnName = "MatKhau";
+				colvarMatKhau.DataType = DbType.AnsiString;
+				colvarMatKhau.MaxLength = 255;
+				colvarMatKhau.AutoIncrement = false;
+				colvarMatKhau.IsNullable = true;
+				colvarMatKhau.IsPrimaryKey = false;
+				colvarMatKhau.IsForeignKey = false;
+				colvarMatKhau.IsReadOnly = false;
+				colvarMatKhau.DefaultSetting = @"";
+				colvarMatKhau.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarMatKhau);
+				
 				TableSchema.TableColumn colvarDiaChi = new TableSchema.TableColumn(schema);
 				colvarDiaChi.ColumnName = "DiaChi";
 				colvarDiaChi.DataType = DbType.String;
@@ -231,6 +244,14 @@ namespace CMS.DataAccess
 		{
 			get { return GetColumnValue<string>(Columns.Email); }
 			set { SetColumnValue(Columns.Email, value); }
+		}
+		  
+		[XmlAttribute("MatKhau")]
+		[Bindable(true)]
+		public string MatKhau 
+		{
+			get { return GetColumnValue<string>(Columns.MatKhau); }
+			set { SetColumnValue(Columns.MatKhau, value); }
 		}
 		  
 		[XmlAttribute("DiaChi")]
@@ -291,7 +312,7 @@ namespace CMS.DataAccess
 		/// <summary>
 		/// Inserts a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Insert(Guid varMaKH,string varTenKH,string varDienThoai,string varEmail,string varDiaChi)
+		public static void Insert(Guid varMaKH,string varTenKH,string varDienThoai,string varEmail,string varMatKhau,string varDiaChi)
 		{
 			KhachHang item = new KhachHang();
 			
@@ -302,6 +323,8 @@ namespace CMS.DataAccess
 			item.DienThoai = varDienThoai;
 			
 			item.Email = varEmail;
+			
+			item.MatKhau = varMatKhau;
 			
 			item.DiaChi = varDiaChi;
 			
@@ -315,7 +338,7 @@ namespace CMS.DataAccess
 		/// <summary>
 		/// Updates a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Update(Guid varMaKH,string varTenKH,string varDienThoai,string varEmail,string varDiaChi)
+		public static void Update(Guid varMaKH,string varTenKH,string varDienThoai,string varEmail,string varMatKhau,string varDiaChi)
 		{
 			KhachHang item = new KhachHang();
 			
@@ -326,6 +349,8 @@ namespace CMS.DataAccess
 				item.DienThoai = varDienThoai;
 			
 				item.Email = varEmail;
+			
+				item.MatKhau = varMatKhau;
 			
 				item.DiaChi = varDiaChi;
 			
@@ -370,9 +395,16 @@ namespace CMS.DataAccess
         
         
         
-        public static TableSchema.TableColumn DiaChiColumn
+        public static TableSchema.TableColumn MatKhauColumn
         {
             get { return Schema.Columns[4]; }
+        }
+        
+        
+        
+        public static TableSchema.TableColumn DiaChiColumn
+        {
+            get { return Schema.Columns[5]; }
         }
         
         
@@ -385,6 +417,7 @@ namespace CMS.DataAccess
 			 public static string TenKH = @"TenKH";
 			 public static string DienThoai = @"DienThoai";
 			 public static string Email = @"Email";
+			 public static string MatKhau = @"MatKhau";
 			 public static string DiaChi = @"DiaChi";
 						
 		}

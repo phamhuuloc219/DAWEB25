@@ -80,7 +80,7 @@ namespace CMS.DataAccess
 	    /// Inserts a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Insert, true)]
-	    public void Insert(Guid MaKH,string TenKH,string DienThoai,string Email,string DiaChi)
+	    public void Insert(Guid MaKH,string TenKH,string DienThoai,string Email,string MatKhau,string DiaChi)
 	    {
 		    KhachHang item = new KhachHang();
 		    
@@ -92,6 +92,8 @@ namespace CMS.DataAccess
             
             item.Email = Email;
             
+            item.MatKhau = MatKhau;
+            
             item.DiaChi = DiaChi;
             
 	    
@@ -102,7 +104,7 @@ namespace CMS.DataAccess
 	    /// Updates a record, can be used with the Object Data Source
 	    /// </summary>
         [DataObjectMethod(DataObjectMethodType.Update, true)]
-	    public void Update(Guid MaKH,string TenKH,string DienThoai,string Email,string DiaChi)
+	    public void Update(Guid MaKH,string TenKH,string DienThoai,string Email,string MatKhau,string DiaChi)
 	    {
 		    KhachHang item = new KhachHang();
 	        item.MarkOld();
@@ -115,6 +117,8 @@ namespace CMS.DataAccess
 			item.DienThoai = DienThoai;
 				
 			item.Email = Email;
+				
+			item.MatKhau = MatKhau;
 				
 			item.DiaChi = DiaChi;
 				

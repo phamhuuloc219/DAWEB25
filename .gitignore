@@ -7,5 +7,29 @@
 /WebAdmin/.vs
 /Web/bin
 /Web/obj/Debug
+<<<<<<< HEAD
 /WebAdmin/.vs/WebAdmin/v17/DocumentLayout.json
 /WebAdmin/.vs/WebAdmin/v17/.suo
+=======
+/BusinessLogic/bin/Debug
+/BusinessLogic/obj/Debug
+/WebAdmin/obj/Debug/WebAdmin.pdb
+/WebAdmin/obj/Debug/WebAdmin.dll
+/WebAdmin/obj/Debug/WebAdmin.csproj.AssemblyReference.cache
+/WebAdmin/bin/WebAdmin.pdb
+/WebAdmin/bin/WebAdmin.dll
+/WebAdmin/bin/BusinessLogic.pdb
+/WebAdmin/bin/BusinessLogic.dll
+/WebAdmin/.vs/WebAdmin/v17/DocumentLayout.json
+/WebAdmin/.vs/WebAdmin/v17/DocumentLayout.backup.json
+/WebAdmin/.vs/WebAdmin/v17/.suo
+/WebAdmin/.vs/WebAdmin/config/applicationhost.config
+/BusinessLogic/obj/Debug/BusinessLogic.pdb
+/BusinessLogic/obj/Debug/BusinessLogic.dll
+/BusinessLogic/bin/Debug/BusinessLogic.dll
+/BusinessLogic/bin/Debug/BusinessLogic.pdb
+/WebAdmin/obj/Debug/WebAdmin.csproj.CoreCompileInputs.cache
+/WebAdmin/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+>>>>>>> 875bedb395e350126b53e08938e54fed00be599c
+/DataAccess/obj/Debug/DataAccess.csproj.AssemblyReference.cache
+/DataAccess/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

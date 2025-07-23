@@ -139,6 +139,19 @@ namespace CMS.DataAccess
 				colvarMaLMH.ForeignKeyTableName = "";
 				schema.Columns.Add(colvarMaLMH);
 				
+				TableSchema.TableColumn colvarMoTaLMH = new TableSchema.TableColumn(schema);
+				colvarMoTaLMH.ColumnName = "MoTaLMH";
+				colvarMoTaLMH.DataType = DbType.String;
+				colvarMoTaLMH.MaxLength = -1;
+				colvarMoTaLMH.AutoIncrement = false;
+				colvarMoTaLMH.IsNullable = true;
+				colvarMoTaLMH.IsPrimaryKey = false;
+				colvarMoTaLMH.IsForeignKey = false;
+				colvarMoTaLMH.IsReadOnly = false;
+				colvarMoTaLMH.DefaultSetting = @"";
+				colvarMoTaLMH.ForeignKeyTableName = "";
+				schema.Columns.Add(colvarMoTaLMH);
+				
 				TableSchema.TableColumn colvarTenLMH = new TableSchema.TableColumn(schema);
 				colvarTenLMH.ColumnName = "TenLMH";
 				colvarTenLMH.DataType = DbType.String;
@@ -168,6 +181,14 @@ namespace CMS.DataAccess
 		{
 			get { return GetColumnValue<Guid>(Columns.MaLMH); }
 			set { SetColumnValue(Columns.MaLMH, value); }
+		}
+		  
+		[XmlAttribute("MoTaLMH")]
+		[Bindable(true)]
+		public string MoTaLMH 
+		{
+			get { return GetColumnValue<string>(Columns.MoTaLMH); }
+			set { SetColumnValue(Columns.MoTaLMH, value); }
 		}
 		  
 		[XmlAttribute("TenLMH")]
@@ -228,11 +249,13 @@ namespace CMS.DataAccess
 		/// <summary>
 		/// Inserts a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Insert(Guid varMaLMH,string varTenLMH)
+		public static void Insert(Guid varMaLMH,string varMoTaLMH,string varTenLMH)
 		{
 			LoaiMH item = new LoaiMH();
 			
 			item.MaLMH = varMaLMH;
+			
+			item.MoTaLMH = varMoTaLMH;
 			
 			item.TenLMH = varTenLMH;
 			
@@ -246,11 +269,13 @@ namespace CMS.DataAccess
 		/// <summary>
 		/// Updates a record, can be used with the Object Data Source
 		/// </summary>
-		public static void Update(Guid varMaLMH,string varTenLMH)
+		public static void Update(Guid varMaLMH,string varMoTaLMH,string varTenLMH)
 		{
 			LoaiMH item = new LoaiMH();
 			
 				item.MaLMH = varMaLMH;
+			
+				item.MoTaLMH = varMoTaLMH;
 			
 				item.TenLMH = varTenLMH;
 			
@@ -274,9 +299,16 @@ namespace CMS.DataAccess
         
         
         
-        public static TableSchema.TableColumn TenLMHColumn
+        public static TableSchema.TableColumn MoTaLMHColumn
         {
             get { return Schema.Columns[1]; }
+        }
+        
+        
+        
+        public static TableSchema.TableColumn TenLMHColumn
+        {
+            get { return Schema.Columns[2]; }
         }
         
         
@@ -286,6 +318,7 @@ namespace CMS.DataAccess
 		public struct Columns
 		{
 			 public static string MaLMH = @"MaLMH";
+			 public static string MoTaLMH = @"MoTaLMH";
 			 public static string TenLMH = @"TenLMH";
 						
 		}

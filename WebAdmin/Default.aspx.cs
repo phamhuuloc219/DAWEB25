@@ -13,8 +13,10 @@ namespace WebAdmin
         {
             if (Session["Admin"] == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("Login.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
             }
+
         }
 
     }
