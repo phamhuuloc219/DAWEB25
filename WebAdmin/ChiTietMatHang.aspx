@@ -21,7 +21,7 @@
         <div class="container mt-4">
             <div class="card card-outline card-primary">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="card-title">📋 Thông tin mặt hàng</h5>
+                    <h5 class="card-title">Thông tin mặt hàng</h5>
                 </div>
                 <div class="card-body">
                     <asp:HiddenField ID="hfMaMH" runat="server" />
