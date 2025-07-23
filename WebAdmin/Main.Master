@@ -21,7 +21,15 @@
     <!-- Theme style -->
     <link rel="stylesheet" runat="server" href="~/Public/dist/css/adminlte.min.css">
     <!-- Toastr CSS -->
+    <script src="<%= ResolveUrl("~/Public/plugins/jquery/jquery.min.js") %>"></script>
+
+    <!-- Toastr -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="<%= ResolveUrl("~/Public/plugins/bootstrap/js/bootstrap.bundle.min.js") %>"></script>
+
 
     <style>
         .truncate-text {
@@ -276,13 +284,14 @@
         </div>
 
         <!-- REQUIRED SCRIPTS -->
-    </form> 
+    </form>
 </body>
 <script src="<%= ResolveUrl("~/Public/plugins/jquery/jquery.min.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/plugins/bootstrap/js/bootstrap.bundle.min.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/dist/js/adminlte.js") %>"></script>
 <script src="<%= ResolveUrl("~/Public/dist/js/demo.js") %>"></script>
-<script src="<%= ResolveUrl("~/Public/dist/js/pages/dashboard3.js") %>"></script><!-- Toastr JS -->
+<script src="<%= ResolveUrl("~/Public/dist/js/pages/dashboard3.js") %>"></script>
+<!-- Toastr JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
     toastr.options = {
