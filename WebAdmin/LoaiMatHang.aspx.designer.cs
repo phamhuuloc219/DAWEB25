@@ -42,6 +42,15 @@ namespace WebAdmin
         protected global::System.Web.UI.WebControls.GridView gvLoaiMatHang;
 
         /// <summary>
+        /// pnlModalAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlModalAdd;
+
+        /// <summary>
         /// hfMaLoai control.
         /// </summary>
         /// <remarks>
@@ -78,13 +87,13 @@ namespace WebAdmin
         protected global::System.Web.UI.WebControls.Button btnLuu;
 
         /// <summary>
-        /// hfMaXoa control.
+        /// hfMaLoaiXoa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfMaXoa;
+        protected global::System.Web.UI.WebControls.HiddenField hfMaLoaiXoa;
 
         /// <summary>
         /// btnXacNhanXoa control.

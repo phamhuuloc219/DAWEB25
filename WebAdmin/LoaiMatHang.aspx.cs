@@ -95,7 +95,7 @@ namespace WebAdmin
         }
         protected void btnXacNhanXoa_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(hfMaXoa.Value) && Guid.TryParse(hfMaXoa.Value, out Guid id))
+            if (!string.IsNullOrEmpty(hfMaLoaiXoa.Value) && Guid.TryParse(hfMaLoaiXoa.Value, out Guid id))
             {
                 try
                 {
