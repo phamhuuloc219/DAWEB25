@@ -3,16 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
-    <style>
-        .img-upload {
-            cursor: pointer;
-            border: 2px dashed #007bff;
-            border-radius: 5px;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMain" runat="server">

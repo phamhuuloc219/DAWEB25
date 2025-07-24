@@ -12,9 +12,9 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="card card-primary card-outline mt-3">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="card-title text-primary">Quản lý mặt hàng</h3>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quản lý mặt hàng</h3>
                     <a href="ChiTietMatHang.aspx" class="btn btn-success">Thêm mới</a>
                 </div>
 
@@ -54,9 +54,9 @@
     <div class="modal fade" id="modalXoa" tabindex="-1" role="dialog" aria-labelledby="modalXoaLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-danger text-white">
+                <div class="modal-header">
                     <h5 class="modal-title">Xác nhận xoá</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close text-white" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
                     <p>Bạn có chắc chắn muốn xoá mặt hàng này không?</p>

@@ -12,9 +12,9 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="card card-primary card-outline mt-3">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="card-title text-primary">Quản lý loại mặt hàng</h3>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quản lý loại mặt hàng</h3>
                     <asp:Button ID="btnShowModal" runat="server" Text="Thêm mới" CssClass="btn btn-success"
                         OnClientClick="showModal(); return false;" />
                 </div>
@@ -42,7 +42,6 @@
                                     <a href="javascript:void(0);" onclick='<%# Eval("MaLoai", "confirmDelete(\"{0}\")") %>' title="Xoá" class="text-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -56,9 +55,9 @@
         <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
+                    <div class="modal-header">
                         <h5 class="modal-title" id="modalTitle">Tiêu đề</h5>
-                        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body">
                         <asp:HiddenField ID="hfMaLoai" runat="server" />
@@ -82,10 +81,10 @@
     <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalDeleteLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-danger text-white">
+                <div class="modal-header" style="background: #e74c3c; color: #ffffff;">
                     <h5 class="modal-title" id="modalDeleteLabel">Xác nhận xoá</h5>
                     <button type="button" class="close text-white" data-dismiss="modal" aria-label="Đóng">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -121,6 +120,5 @@
             $('#<%= hfMaLoaiXoa.ClientID %>').val(id);
             $('#modalConfirmDelete').modal('show');
         }
-
     </script>
 </asp:Content>
