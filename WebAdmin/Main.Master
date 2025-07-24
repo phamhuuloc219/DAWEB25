@@ -30,7 +30,7 @@
     <!-- Bootstrap -->
     <script src="<%= ResolveUrl("~/Public/plugins/bootstrap/js/bootstrap.bundle.min.js") %>"></script>
 
-
+    <link rel="stylesheet" runat="server" href="~/Styles/css/custom.css"/>
     <style>
         .truncate-text {
             max-width: 250px;
