@@ -11,11 +11,11 @@ namespace Web
             Session.Clear();
             Session.Abandon();
 
-            if (Request.Cookies["Username"] != null)
+            if (Request.Cookies["KhachHang"] != null)
             {
-                HttpCookie expiredCookie = new HttpCookie("Username");
-                expiredCookie.Expires = DateTime.Now.AddDays(-1);
-                Response.Cookies.Add(expiredCookie);
+                HttpCookie ck = new HttpCookie("KhachHang");
+                ck.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(ck);
             }
 
             Response.Redirect("Default.aspx", false);

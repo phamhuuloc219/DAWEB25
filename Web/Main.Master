@@ -52,7 +52,7 @@
                 <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item mr-3">
                         <a class="nav-link text-white position-relative" href="GioHang.aspx">
-                            <i class="fas fa-shopping-cart"></i>Giỏ hàng
+                            <i class="fas fa-shopping-cart"></i> Giỏ hàng
                              <span id="cartCount" runat="server" class="badge badge-danger position-absolute" style="top: 0; right: 0; font-size: 0.7rem; display: none;"></span>
                         </a>
 
@@ -60,7 +60,7 @@
                     <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="javascript:void(0);" onclick="$('#loginModal').modal('show');">
-                                <i class="fas fa-sign-in-alt"></i>Đăng nhập
+                                <i class="fas fa-sign-in-alt"></i> Đăng nhập
                             </a>
                         </li>
                     </asp:PlaceHolder>
@@ -72,7 +72,7 @@
                                 <asp:Label ID="lblTenKH" runat="server" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="UserProfile.aspx">Thông tin cá nhân</a>
+                                <a class="dropdown-item" href="ThongTinCaNhan">Thông tin cá nhân</a>
                                 <a class="dropdown-item" href="DonHangCuaToi.aspx">Đơn hàng</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="Logout.aspx">Đăng xuất</a>

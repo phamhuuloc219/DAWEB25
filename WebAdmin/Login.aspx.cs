@@ -15,6 +15,18 @@ namespace WebAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Admin"] == null && Request.Cookies["AdminLogin"] != null)
+            {
+                string username = Request.Cookies["AdminLogin"]["Username"];
+
+                if (!string.IsNullOrEmpty(username))
+                {
+                    Session["Admin"] = username;
+                    Response.Redirect("~/Default.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+            }
+
             lblError.Text = "";
         }
 
@@ -36,10 +48,16 @@ namespace WebAdmin
                 if (user != null)
                 {
                     Session["Admin"] = user.Username;
+
+                    HttpCookie ck = new HttpCookie("AdminLogin");
+                    ck.Values["Username"] = user.Username;
+                    ck.Expires = DateTime.Now.AddDays(7);
+                    Response.Cookies.Add(ck);
+
                     Response.Redirect("~/Default.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
-                    txtUsername.Text = txtPassword.Text = string.Empty;
                 }
+
                 else
                 {
                     lblError.Text = "Tên đăng nhập hoặc mật khẩu không đúng.";

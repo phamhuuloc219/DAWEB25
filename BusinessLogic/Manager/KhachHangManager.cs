@@ -65,5 +65,13 @@ namespace BusinessLogic
                 .From(KhachHang.Schema.TableName)
                 .ExecuteTypedList<KhachHang>();
         }
+        public static KhachHang GetKhachHangByEmail(string email)
+        {
+            return new Select()
+                .From(KhachHang.Schema)
+                .Where(KhachHang.Columns.Email).IsEqualTo(email)
+                .ExecuteSingle<KhachHang>();
+        }
+
     }
 }

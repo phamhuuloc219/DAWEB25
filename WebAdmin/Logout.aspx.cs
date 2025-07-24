@@ -14,12 +14,14 @@ namespace WebAdmin
             Session.Clear();
             Session.Abandon();
 
-            if (Request.Cookies["Username"] != null)
+            if (Request.Cookies["AdminLogin"] != null)
             {
-                Response.Cookies["Username"].Expires = DateTime.Now.AddDays(-1);
+                HttpCookie ck = new HttpCookie("AdminLogin");
+                ck.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(ck);
             }
 
-            Response.Redirect("Login.aspx", false);
+            Response.Redirect("Login1.aspx", false);
             Context.ApplicationInstance.CompleteRequest();
         }
     }

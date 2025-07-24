@@ -71,7 +71,7 @@ namespace WebAdmin
                     khachHang.DiaChi = txtDiaChi.Text.Trim();
                     if (!string.IsNullOrEmpty(txtMatKhau.Text.Trim()))
                     {
-                        if (txtMatKhau.Text.Trim().Length > 8)
+                        if (txtMatKhau.Text.Trim().Length >= 8)
                         {
                             khachHang.MatKhau = txtMatKhau.Text.Trim();
                         }

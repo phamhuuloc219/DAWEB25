@@ -12,6 +12,8 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            AutoLoginWithCookie();
+
             if (!IsPostBack)
             {
                 CapNhatSoLuongGioHang();
@@ -21,6 +23,20 @@ namespace Web
                 {
                     Session.Remove("LoginSuccess");
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "toastLoginSuccess", "toastr.success('Đăng nhập thành công!');", true);
+                }
+            }
+        }
+
+        private void AutoLoginWithCookie()
+        {
+            if (Session["KhachHang"] == null && Request.Cookies["KhachHang"] != null)
+            {
+                string email = Request.Cookies["KhachHang"]["Email"];
+
+                CMS.DataAccess.KhachHang kh = BusinessLogic.KhachHangManager.GetKhachHangByEmail(email);
+                if (kh != null)
+                {
+                    Session["KhachHang"] = kh;
                 }
             }
         }
@@ -68,6 +84,11 @@ namespace Web
                 Session["KhachHang"] = kh;
                 Session["LoginSuccess"] = true;
                 lblLoginError.Text = "";
+
+                HttpCookie ck = new HttpCookie("KhachHang");
+                ck.Values["Email"] = kh.Email;
+                ck.Expires = DateTime.Now.AddDays(7);
+                Response.Cookies.Add(ck);
 
                 Response.Redirect(Request.RawUrl, false);
                 Context.ApplicationInstance.CompleteRequest();
