@@ -104,5 +104,47 @@ namespace BusinessLogic
 
             return result;
         }
+
+        public static int GetMaDonHang()
+        {
+            return new Select()
+                .From(DonHang.Schema)
+                .Where(DonHang.Columns.NgayBan).IsGreaterThanOrEqualTo(DateTime.Today)
+                .And(DonHang.Columns.NgayBan).IsLessThan(DateTime.Today.AddDays(1))
+                .GetRecordCount();
+        }
+    }
+
+    public class CtdhManager
+    {
+        public static Ctdh ThemChiTietDonHang(Ctdh ct)
+        {
+            return new CtdhController().Insert(ct);
+        }
+
+        public static void ThemNhieuChiTiet(List<Ctdh> danhSach)
+        {
+            foreach (var ct in danhSach)
+            {
+                new CtdhController().Insert(ct);
+            }
+        }
+
+        public static List<Ctdh> LayChiTietTheoDon(string maDH)
+        {
+            return new Select()
+                .From(Ctdh.Schema)
+                .Where(Ctdh.Columns.MaDH).IsEqualTo(maDH)
+                .ExecuteTypedList<Ctdh>();
+        }
+
+        public static bool XoaChiTietTheoDon(string maDH)
+        {
+            int rows = new Delete()
+                .From(Ctdh.Schema)
+                .Where(Ctdh.Columns.MaDH).IsEqualTo(maDH)
+                .Execute();
+            return rows > 0;
+        }
     }
 }

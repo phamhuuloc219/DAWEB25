@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessLogic;
+using CMS.DataAccess;
 
 namespace Web
 {
@@ -89,8 +90,51 @@ namespace Web
 
         protected void btnThanhToan_Click(object sender, EventArgs e)
         {
+            CMS.DataAccess.KhachHang kh = Session["KhachHang"] as CMS.DataAccess.KhachHang;
+
+            if (kh == null)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "showLoginModal", "$('#loginModal').modal('show');", true);
+                return;
+            }
+
+            List<CartItem> gioHang = Session["GioHang"] as List<CartItem>;
+            if (gioHang == null || gioHang.Count == 0)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "empty", "toastr.warning('Giỏ hàng trống!');", true);
+                return;
+            }
+
+            string prefix = DateTime.Now.ToString("yyMMdd");
+
+            int countToday = DonHangManager.GetMaDonHang();
+
+            string maDH = prefix + (countToday + 1).ToString("D4");
+
+
+            DonHang dh = new DonHang();
+            dh.MaDH = maDH;
+            dh.MaKH = kh.MaKH;
+            dh.NgayBan = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            DonHangManager.InsertDonHang(dh);
+
+            foreach (var item in gioHang)
+            {
+                MatHang mh = MatHangManager.GetMatHangById(item.MaMH.ToString());
+                if (mh != null)
+                {
+                    Ctdh ct = new Ctdh();
+                    ct.MaDH = maDH;
+                    ct.MaMH = mh.MaMH;
+                    ct.Slb = item.SoLuong;
+                    ct.Dgb = mh.GiaBan ?? 0;
+                    CtdhManager.ThemChiTietDonHang(ct);
+                }
+            }
+
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "toastr.success('Thanh toán thành công!');", true);
             Session["GioHang"] = new List<CartItem>();
+            Response.Redirect(Request.RawUrl);
             LoadGioHang();
         }
         public class CartItem

@@ -17,6 +17,11 @@ namespace Web
                 CapNhatSoLuongGioHang();
                 CapNhatTaiKhoanNguoiDung();
 
+                if (Session["LoginSuccess"] != null && (bool)Session["LoginSuccess"])
+                {
+                    Session.Remove("LoginSuccess");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "toastLoginSuccess", "toastr.success('Đăng nhập thành công!');", true);
+                }
             }
         }
 
@@ -61,6 +66,7 @@ namespace Web
             if (kh != null)
             {
                 Session["KhachHang"] = kh;
+                Session["LoginSuccess"] = true;
                 lblLoginError.Text = "";
 
                 Response.Redirect(Request.RawUrl, false);
