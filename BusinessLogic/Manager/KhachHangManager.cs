@@ -19,6 +19,16 @@ namespace BusinessLogic
                 .ExecuteSingle<AdminUser>();
         }
 
+        public static KhachHang LoginKhachHang(string email, string matKhau)
+        {
+            return new Select()
+                .From(KhachHang.Schema)
+                .Where(KhachHang.Columns.Email).IsEqualTo(email)
+                .And(KhachHang.Columns.MatKhau).IsEqualTo(matKhau)
+                .ExecuteSingle<KhachHang>();
+        }
+
+
         public static KhachHang InsertKhachHang(KhachHang khachHang)
         {
             return new KhachHangController().Insert(khachHang);

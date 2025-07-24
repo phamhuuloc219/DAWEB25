@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Web.Main" %>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+    <!-- Bootstrap + Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Styles/css/custom.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form#form1 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="Default.aspx">
+                    <img src="~/Images/logo.png" alt="Logo" style="height: 30px;" />
+                    ShopOnline
+                </a>
+
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link text-white position-relative" href="GioHang.aspx">
+                            <i class="fas fa-shopping-cart"></i>Giỏ hàng
+                             <span id="cartCount" runat="server" class="badge badge-danger position-absolute" style="top: 0; right: 0; font-size: 0.7rem; display: none;"></span>
+                        </a>
+
+                    </li>
+                    <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="javascript:void(0);" onclick="$('#loginModal').modal('show');">
+                                <i class="fas fa-sign-in-alt"></i>Đăng nhập
+                            </a>
+                        </li>
+                    </asp:PlaceHolder>
+
+                    <asp:PlaceHolder ID="phLoggedIn" runat="server">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i>
+                                <asp:Label ID="lblTenKH" runat="server" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="UserProfile.aspx">Thông tin cá nhân</a>
+                                <a class="dropdown-item" href="DonHangCuaToi.aspx">Đơn hàng</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="Logout.aspx">Đăng xuất</a>
+                            </div>
+                        </li>
+                    </asp:PlaceHolder>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container my-4 main-content">
+            <asp:ContentPlaceHolder ID="cpMain" runat="server" />
+        </div>
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <asp:Panel ID="pnlLogin" runat="server">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <asp:Label ID="lblLoginError" runat="server" CssClass="text-danger" />
+          <div class="form-group">
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" Placeholder="Mật khẩu" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary" Text="Đăng nhập" OnClick="btnLogin_Click" />
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        </div>
+      </asp:Panel>
+    </div>
+  </div>
+</div>
+
+        <footer class="bg-dark text-white mt-5 p-4 text-center">
+            &copy; <%= DateTime.Now.Year %> ShopOnline. All rights reserved.
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <asp:ContentPlaceHolder ID="scripts" runat="server" />
+    </form>
+</body>
+</html>

@@ -1,44 +1,42 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web._Default" %>
+﻿<%@ Page Title="Trang chủ" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Web.Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Trang chủ
+</asp:Content>
 
-    <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-        </section>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
-        </div>
-    </main>
+<asp:Content ID="Content3" ContentPlaceHolderID="cpMain" runat="server">
+    <div class="category-filter mb-4">
+        <asp:Repeater ID="rptLoaiMatHang" runat="server">
+            <ItemTemplate>
+                <asp:LinkButton ID="lnkLoai" runat="server" CssClass="btn btn-outline-primary mr-2 mb-2"
+                    CommandArgument='<%# Eval("MaLoai") %>' OnCommand="LoaiMatHang_Command">
+                    <%# Eval("TenLoai") %>
+                </asp:LinkButton>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 
+    <div class="row">
+        <asp:Repeater ID="rptMatHang" runat="server">
+            <ItemTemplate>
+                <div class="col-md-3 mb-4 d-flex">
+                    <div class="product-card w-100">
+                        <img src='<%# Eval("AnhMH") %>' alt="Ảnh mặt hàng" class="product-image" />
+                        <div class="product-title"><%# Eval("TenMH") %></div>
+                        <div class="product-price"><%# Eval("GiaBan", "{0:N0} đ") %></div>
+                        <asp:Button ID="btnAddToCart" runat="server" Text="Thêm vào giỏ hàng"
+                            CssClass="btn btn-sm btn-success mt-2"
+                            CommandArgument='<%# Eval("MaMH") %>' OnCommand="ThemVaoGio_Command" />
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+</asp:Content>
+    
+
+<asp:Content ID="Content4" ContentPlaceHolderID="scripts" runat="server">
 </asp:Content>
