@@ -6,3 +6,10 @@ D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInp
 D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
 D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.dll
 D:\Learning\GitHub\DAWEB25\DataAccess\obj\Debug\DataAccess.pdb
+D:\Github\DAWEB25\DataAccess\bin\Debug\DataAccess.dll
+D:\Github\DAWEB25\DataAccess\bin\Debug\DataAccess.pdb
+D:\Github\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+D:\Github\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Github\DAWEB25\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
+D:\Github\DAWEB25\DataAccess\obj\Debug\DataAccess.dll
+D:\Github\DAWEB25\DataAccess\obj\Debug\DataAccess.pdb

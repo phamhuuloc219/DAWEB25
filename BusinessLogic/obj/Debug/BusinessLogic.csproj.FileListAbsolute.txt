@@ -8,3 +8,12 @@ D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreComp
 D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\Business.CF5D6E35.Up2Date
 D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.dll
 D:\Learning\GitHub\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Github\DAWEB25\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Github\DAWEB25\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Github\DAWEB25\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Github\DAWEB25\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Github\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+D:\Github\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Github\DAWEB25\BusinessLogic\obj\Debug\Business.CF5D6E35.Up2Date
+D:\Github\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Github\DAWEB25\BusinessLogic\obj\Debug\BusinessLogic.pdb

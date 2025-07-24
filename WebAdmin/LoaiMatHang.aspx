@@ -5,6 +5,190 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card .card-header {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: #4a90e2;
+            color: #ffffff;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-left: auto; /* Đẩy button sang bên phải */
+        }
+
+        .btn-success:hover {
+            background: #219653;
+            transform: translateY(-2px);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .table tr:hover {
+            background: #f1f5f9;
+        }
+
+        .text-primary {
+            color: #4a90e2;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .text-danger {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        .text-primary:hover,
+        .text-danger:hover {
+            opacity: 0.8;
+        }
+
+        .modal-header {
+            background: #4a90e2;
+            color: #ffffff;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .close {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+        }
+
+        .modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #4a90e2;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMain" runat="server">
@@ -12,9 +196,9 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="card card-primary card-outline mt-3">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h3 class="card-title text-primary">Quản lý loại mặt hàng</h3>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Quản lý loại mặt hàng</h3>
                     <asp:Button ID="btnShowModal" runat="server" Text="Thêm mới" CssClass="btn btn-success"
                         OnClientClick="showModal(); return false;" />
                 </div>
@@ -42,7 +226,6 @@
                                     <a href="javascript:void(0);" onclick='<%# Eval("MaLoai", "confirmDelete(\"{0}\")") %>' title="Xoá" class="text-danger">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
-
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -56,9 +239,9 @@
         <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
+                    <div class="modal-header">
                         <h5 class="modal-title" id="modalTitle">Tiêu đề</h5>
-                        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
                     <div class="modal-body">
                         <asp:HiddenField ID="hfMaLoai" runat="server" />
@@ -82,10 +265,10 @@
     <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalDeleteLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-danger text-white">
+                <div class="modal-header" style="background: #e74c3c; color: #ffffff;">
                     <h5 class="modal-title" id="modalDeleteLabel">Xác nhận xoá</h5>
                     <button type="button" class="close text-white" data-dismiss="modal" aria-label="Đóng">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -121,6 +304,5 @@
             $('#<%= hfMaLoaiXoa.ClientID %>').val(id);
             $('#modalConfirmDelete').modal('show');
         }
-
     </script>
 </asp:Content>
