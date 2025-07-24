@@ -86,12 +86,11 @@ body {
     .text-danger:hover {
         opacity: 0.8;
     }
-
+.btn-danger,
 .btn-primary,
 .btn-secondary,
 .btn-success {
     border: none;
-    padding: 10px 20px;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
@@ -204,6 +203,8 @@ body {
 
     .modal.show {
         display: block;
+        opacity: 1;
+        z-index:10000;
     }
 
 .modal-dialog {

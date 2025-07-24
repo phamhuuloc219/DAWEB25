@@ -124,7 +124,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="HoaDon.aspx" />
+    <Content Include="DonHang.aspx" />
     <Content Include="KhachHang.aspx" />
     <Content Include="LoaiMatHang.aspx" />
     <Content Include="Login.aspx" />
@@ -2733,12 +2733,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.aspx.cs">
-      <DependentUpon>HoaDon.aspx</DependentUpon>
+    <Compile Include="DonHang.aspx.cs">
+      <DependentUpon>DonHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HoaDon.aspx.designer.cs">
-      <DependentUpon>HoaDon.aspx</DependentUpon>
+    <Compile Include="DonHang.aspx.designer.cs">
+      <DependentUpon>DonHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.aspx.cs">
       <DependentUpon>KhachHang.aspx</DependentUpon>
