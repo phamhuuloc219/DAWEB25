@@ -71,7 +71,7 @@ namespace Web
                 lblLoginError.Text = "Email hoặc mật khẩu không đúng.";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "showModal", "$('#loginModal').modal('show');", true);
             }
+            txtPassword.Attributes["type"] = "password";
         }
-
     }
 }
