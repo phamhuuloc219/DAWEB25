@@ -11,7 +11,7 @@
         <div class="container mt-4">
             <div class="card card-outline card-primary">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="card-title">📋 Thông tin mặt hàng</h5>
+                    <h5 class="card-title">Thông tin mặt hàng</h5>
                 </div>
                 <div class="card-body">
                     <asp:HiddenField ID="hfMaMH" runat="server" />
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="card-footer text-right">
-                    <asp:Button ID="btnLuu" runat="server" Text="Lưu thông tin" CssClass="btn btn-primary" OnClick="btnLuu_Click" />
+                    <asp:Button ID="btnLuu" runat="server" Text="Lưu thông tin" CssClass="btn btn-success" OnClick="btnLuu_Click" />
                     <a href="MatHang.aspx" class="btn btn-secondary">Quay lại</a>
                 </div>
             </div>

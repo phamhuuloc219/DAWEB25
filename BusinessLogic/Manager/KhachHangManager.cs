@@ -73,5 +73,15 @@ namespace BusinessLogic
                 .ExecuteSingle<KhachHang>();
         }
 
+        public static bool CheckEmailIsUsed(string email)
+        {
+            KhachHang kh = new Select()
+                .From(KhachHang.Schema)
+                .Where(KhachHang.Columns.Email).IsEqualTo(email)
+                .ExecuteSingle<KhachHang>();
+
+            return kh != null;
+        }
+
     }
 }

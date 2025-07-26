@@ -78,7 +78,7 @@
     <div class="modal fade" id="modalChiTiet" tabindex="-1" role="dialog" aria-labelledby="modalChiTietLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header text-white" style="background:#4a90e2">
                     <h5 class="modal-title">Chi tiết đơn hàng</h5>
                     <button type="button" class="close text-white" data-dismiss="modal">
                         <span aria-hidden="true">×</span>

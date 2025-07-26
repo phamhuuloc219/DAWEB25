@@ -1,4 +1,5 @@
-﻿using CMS.DataAccess;
+﻿using BusinessLogic.Helper;
+using CMS.DataAccess;
 using SubSonic;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace BusinessLogic
                 TenMH = m.TenMH,
                 MoTaMH = m.MoTaMH,
                 GiaBan = m.GiaBan ?? 0,
-                AnhMH = m.AnhMH,
+                AnhMH = ImageHelper.GetImageOrDefault(m.AnhMH),
                 MaLMH = m.MaLMH ?? Guid.Empty,
                 TenLoai = GetTenLoaiMatHang(m.MaLMH ?? Guid.Empty)
             }).ToList();

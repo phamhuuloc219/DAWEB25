@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogic;
+using SubSonic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -68,13 +70,14 @@ namespace Web
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            lblRegisterError.Text = string.Empty;
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
 
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 lblLoginError.Text = "Vui lòng nhập đầy đủ.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "showModal", "$('#loginModal').modal('show');", true);
+                hfAuthTab.Value = "login";
                 return;
             }
 
@@ -96,9 +99,41 @@ namespace Web
             else
             {
                 lblLoginError.Text = "Email hoặc mật khẩu không đúng.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "showModal", "$('#loginModal').modal('show');", true);
+                hfAuthTab.Value = "login";
             }
             txtPassword.Attributes["type"] = "password";
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            lblLoginError.Text = string.Empty;
+            string tenKH = txtTenKH.Text.Trim();
+            string email = txtEmailRegister.Text.Trim();
+            string password = txtPasswordRegister.Text;
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(tenKH))
+            {
+                lblRegisterError.Text = "Vui lòng nhập đầy đủ thông tin để đăng ký.";
+                hfAuthTab.Value = "register";
+                return;
+            }
+
+            if (KhachHangManager.CheckEmailIsUsed(email))
+            {
+                lblRegisterError.Text = "Email đã tồn tại!";
+                hfAuthTab.Value = "register";
+                return;
+            }
+
+            CMS.DataAccess.KhachHang kh = new CMS.DataAccess.KhachHang();
+            kh.TenKH = tenKH;
+            kh.Email = email;
+            kh.MatKhau = password;
+            KhachHangManager.InsertKhachHang(kh);
+
+            Session["KhachHang"] = kh;
+            Response.Redirect(Request.RawUrl);
+        }
+
     }
 }

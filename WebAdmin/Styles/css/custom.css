@@ -220,6 +220,16 @@ body {
 }
 
 .modal-header {
+    background: #dc3545;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-update {
     background: #4a90e2;
     color: #ffffff;
     padding: 15px 20px;

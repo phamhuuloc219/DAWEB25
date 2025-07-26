@@ -125,6 +125,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="DonHang.aspx" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\no-image.png" />
     <Content Include="KhachHang.aspx" />
     <Content Include="LoaiMatHang.aspx" />
     <Content Include="Login.aspx" />

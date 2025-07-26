@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Quản lý khách hàng</h2>
-                    <asp:Button ID="btnShowModal" runat="server" Text="Thêm mới" CssClass="btn-success"
+                    <asp:Button ID="btnShowModal" runat="server" Text="Thêm mới" CssClass="btn-success" style="padding:5px"
                         OnClientClick="showModal(); return false;" />
                 </div>
 
@@ -80,7 +80,7 @@
         <div class="modal" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-update">
                         <h5 class="modal-title" id="modalLabel">Thêm khách hàng mới</h5>
                         <button type="button" class="close" onclick="closeModal()">×</button>
                     </div>
@@ -102,8 +102,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <asp:Button ID="btnThemMoi" runat="server" Text="Lưu thông tin" CssClass="btn-primary" OnClick="btnThemMoi_Click" />
-                        <button type="button" class="btn-secondary" onclick="closeModal()">Đóng</button>
+                        <asp:Button ID="btnThemMoi" style="padding:5px" runat="server" Text="Lưu thông tin" CssClass="btn-success" OnClick="btnThemMoi_Click" />
+                        <button type="button" style="padding:5px" class="btn-secondary" onclick="closeModal()">Đóng</button>
                     </div>
                 </div>
             </div>

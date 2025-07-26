@@ -45,15 +45,15 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="Default.aspx">
-                    <img src="~/Images/logo.png" alt="Logo" style="height: 30px;" />
-                    ShopOnline
+                    <img src="image/logo.png" alt="Logo" style="height: 40px; border-radius: 50%" />
+                    Shop
                 </a>
 
                 <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item mr-3">
                         <a class="nav-link text-white position-relative" href="GioHang.aspx">
                             <i class="fas fa-shopping-cart"></i> Giỏ hàng
-                             <span id="cartCount" runat="server" class="badge badge-danger position-absolute" style="top: 0; right: 0; font-size: 0.7rem; display: none;"></span>
+                             <span id="cartCount" runat="server" ClientIDMode="Static" class="badge badge-danger position-absolute" style="top: 0; right: 0; font-size: 0.7rem; display: none;"></span>
                         </a>
 
                     </li>
@@ -87,36 +87,69 @@
             <asp:ContentPlaceHolder ID="cpMain" runat="server" />
         </div>
 
+        
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <asp:Panel ID="pnlLogin" runat="server">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <asp:Label ID="lblLoginError" runat="server" CssClass="text-danger" />
-                            <div class="form-group">
-                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="Email" />
-                            </div>
-                            <div class="form-group position-relative">
-                                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control pr-5" TextMode="Password" Placeholder="Mật khẩu" />
-                                <span class="toggle-password" onclick="togglePassword()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;">
-                                    <i class="fas fa-eye-slash"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary" Text="Đăng nhập" OnClick="btnLogin_Click" />
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                        </div>
-                    </asp:Panel>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <asp:Panel ID="pnlLogin" runat="server" CssClass="pnlLogin" ClientIDMode="Static">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
+                <div class="modal-body">
+                    <asp:Label ID="lblLoginError" runat="server" CssClass="text-danger" />
+                    <div class="form-group">
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="Email" />
+                    </div>
+                    <div class="form-group position-relative">
+                        <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control pr-5" TextMode="Password" Placeholder="Mật khẩu" />
+                        <span class="toggle-password" onclick="togglePassword()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div class="text-right">
+                        <a href="javascript:void(0);" onclick="switchToRegister()">Chưa có tài khoản?</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-success" Text="Đăng nhập" OnClick="btnLogin_Click" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </asp:Panel>
+
+            <asp:Panel ID="pnlRegister" runat="server" CssClass="pnlRegister d-none" ClientIDMode="Static">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đăng ký</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <asp:Label ID="lblRegisterError" runat="server" CssClass="text-danger" />
+                    <div class="form-group">
+                        <asp:TextBox ID="txtTenKH" runat="server" CssClass="form-control" Placeholder="Họ tên" />
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox ID="txtEmailRegister" runat="server" CssClass="form-control" Placeholder="Email" />
+                    </div>
+                    <div class="form-group position-relative">
+                        <asp:TextBox ID="txtPasswordRegister" runat="server" CssClass="form-control pr-5" TextMode="Password" Placeholder="Mật khẩu" />
+                    </div>
+                    <div class="text-right">
+                        <a href="javascript:void(0);" onclick="switchToLogin()">Đã có tài khoản?</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="btnRegister" runat="server" CssClass="btn btn-success" Text="Đăng ký" OnClick="btnRegister_Click" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </asp:Panel>
         </div>
+        </div>
+            </div>
+        <asp:HiddenField ID="hfAuthTab" runat="server" ClientIDMode="Static" />
 
         <footer class="bg-dark text-white mt-5 p-4 text-center">
             &copy; <%= DateTime.Now.Year %> ShopOnline. All rights reserved.
@@ -141,6 +174,27 @@
                     icon.classList.add('fa-eye-slash');
                 }
             }
+
+            function switchToRegister() {
+                document.getElementById("pnlLogin").classList.add("d-none");
+                document.getElementById("pnlRegister").classList.remove("d-none");
+            }
+
+            function switchToLogin() {
+                document.getElementById("pnlRegister").classList.add("d-none");
+                document.getElementById("pnlLogin").classList.remove("d-none");
+            }
+
+            $(document).ready(function () {
+                var tab = document.getElementById("hfAuthTab").value;
+                if (tab === "login") {
+                    $('#loginModal').modal('show');
+                    switchToLogin();
+                } else if (tab === "register") {
+                    $('#loginModal').modal('show');
+                    switchToRegister();
+                }
+            });
         </script>
 
         <asp:ContentPlaceHolder ID="scripts" runat="server" />

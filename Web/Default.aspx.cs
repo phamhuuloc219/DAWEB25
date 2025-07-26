@@ -76,9 +76,15 @@ namespace Web
                 }
 
                 Session["GioHang"] = gioHang;
+                int tongSoLuong = gioHang.Sum(x => x.SoLuong);
+                string script = $@"
+                    document.getElementById('cartCount').innerText = '{tongSoLuong}';
+                    document.getElementById('cartCount').style.display = '{(tongSoLuong > 0 ? "inline-block" : "none")}';
+                    toastr.success('Đã thêm vào giỏ hàng!');
+                ";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "updateCart", script, true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "testLog", "console.log('Script chạy');", true);
 
-                Response.Redirect(Request.RawUrl);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "addToCartSuccess", "toastr.success('Đã thêm vào giỏ hàng!');", true);
             }
         }
     }

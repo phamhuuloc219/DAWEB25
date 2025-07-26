@@ -55,7 +55,7 @@
         <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-update">
                         <h5 class="modal-title" id="modalTitle">Tiêu đề</h5>
                         <button type="button" class="close" data-dismiss="modal">×</button>
                     </div>
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <asp:Button ID="btnLuu" runat="server" Text="Lưu thông tin" CssClass="btn btn-primary" OnClick="btnLuu_Click" />
+                        <asp:Button ID="btnLuu" runat="server" Text="Lưu thông tin" CssClass="btn btn-success" OnClick="btnLuu_Click" />
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
     <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="modalDeleteLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="background: #e74c3c; color: #ffffff;">
+                <div class="modal-header" style="background: #dc3545; color: #ffffff;">
                     <h5 class="modal-title" id="modalDeleteLabel">Xác nhận xoá</h5>
                     <button type="button" class="close text-white" data-dismiss="modal" aria-label="Đóng">
                         <span aria-hidden="true">×</span>

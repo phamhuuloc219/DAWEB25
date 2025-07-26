@@ -8,6 +8,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cpMain" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
     <div class="category-filter mb-4">
         <asp:Repeater ID="rptLoaiMatHang" runat="server">
             <ItemTemplate>
@@ -19,6 +20,8 @@
         </asp:Repeater>
     </div>
 
+    <asp:UpdatePanel ID="upMatHang" runat="server">
+    <ContentTemplate>
     <div class="row">
         <asp:Repeater ID="rptMatHang" runat="server">
             <ItemTemplate>
@@ -35,6 +38,12 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
+        
+    </ContentTemplate>
+    <Triggers>
+        <asp:AsyncPostBackTrigger ControlID="rptMatHang" EventName="ItemCommand" />
+    </Triggers>
+</asp:UpdatePanel>
 </asp:Content>
     
 

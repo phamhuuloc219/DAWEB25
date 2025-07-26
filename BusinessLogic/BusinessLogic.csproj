@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Manager\DonHangManager.cs" />
     <Compile Include="Manager\KhachHangManager.cs" />
     <Compile Include="Manager\MatHangManager.cs" />
