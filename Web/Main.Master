@@ -73,7 +73,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="ThongTinCaNhan">Thông tin cá nhân</a>
-                                <a class="dropdown-item" href="DonHangCuaToi.aspx">Đơn hàng</a>
+                                <a class="dropdown-item" href="DonHangCuaToi">Đơn hàng</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="Logout.aspx">Đăng xuất</a>
                             </div>

@@ -121,6 +121,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="DonHangCuaToi.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="GioHang.aspx" />
     <Content Include="Global.asax" />
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonHangCuaToi.aspx.cs">
+      <DependentUpon>DonHangCuaToi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonHangCuaToi.aspx.designer.cs">
+      <DependentUpon>DonHangCuaToi.aspx</DependentUpon>
     </Compile>
     <Compile Include="GioHang.aspx.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>

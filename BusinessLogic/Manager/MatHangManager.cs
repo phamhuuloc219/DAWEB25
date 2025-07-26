@@ -39,7 +39,7 @@ namespace BusinessLogic
         {
             if (!Guid.TryParse(id, out Guid maMH)) return null;
 
-            var mh = new MatHang(maMH);
+            MatHang mh = new MatHang(maMH);
             return new MatHangModel
             {
                 MaMH = mh.MaMH,
