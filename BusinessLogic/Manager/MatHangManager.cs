@@ -47,7 +47,7 @@ namespace BusinessLogic
                 TenMH = mh.TenMH,
                 MoTaMH = mh.MoTaMH,
                 GiaBan = mh.GiaBan ?? 0,
-                AnhMH = mh.AnhMH,
+                AnhMH = ImageHelper.GetImageOrDefault(mh.AnhMH),
                 MaLMH = mh.MaLMH ?? Guid.Empty,
                 TenLoai = GetTenLoaiMatHang(mh.MaLMH ?? Guid.Empty)
             };
