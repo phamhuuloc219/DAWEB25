@@ -28,11 +28,11 @@
                         <div class="col-md-3 mb-4 d-flex">
                             <div class="product-card w-100"
                                 onclick="showProductModal(
-                    '<%# Eval("TenMH").ToString().Replace("'", "\\'") %>',
-                    '<%# Eval("AnhMH") %>',
-                    '<%# Eval("MoTaMH").ToString().Replace("'", "\\'") %>',
-                    '<%# Eval("GiaBan") %>',
-                    '<%# Eval("MaMH") %>')">
+                                '<%# Eval("TenMH").ToString().Replace("'", "\\'") %>',
+                                '<%# Eval("AnhMH") %>',
+                                '<%# Eval("MoTaMH").ToString().Replace("'", "\\'") %>',
+                                '<%# Eval("GiaBan") %>',
+                                '<%# Eval("MaMH") %>')">
 
                                 <img src='<%# Eval("AnhMH") %>' alt="Ảnh mặt hàng" class="product-image" />
                                 <div class="product-title"><%# Eval("TenMH") %></div>
@@ -41,12 +41,11 @@
                                 <asp:UpdatePanel runat="server" UpdateMode="Conditional">
                                     <ContentTemplate>
                                         <asp:LinkButton ID="btnAddToCart" runat="server"
-    CssClass="btn btn-sm btn-success mt-2"
-    OnClientClick="event.stopPropagation();"
-    CommandArgument='<%# Eval("MaMH") %>'
-    OnClick="btnAddToCart_Click"
-    Text="Thêm vào giỏ hàng" />
-
+                                            CssClass="btn btn-sm btn-success mt-2"
+                                            OnClientClick="event.stopPropagation();"
+                                            CommandArgument='<%# Eval("MaMH") %>'
+                                            OnClick="btnAddToCart_Click"
+                                            Text="Thêm vào giỏ hàng" />
                                     </ContentTemplate>
                                     <Triggers>
                                         <asp:AsyncPostBackTrigger ControlID="btnAddToCart" EventName="Click" />

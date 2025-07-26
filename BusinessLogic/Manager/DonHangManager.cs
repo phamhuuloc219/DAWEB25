@@ -62,12 +62,15 @@ namespace BusinessLogic
                     tongTien += (ct.Slb ?? 0) * (ct.Dgb ?? 0m);
                 }
 
-
+                DateTime ngay;
+                string ngayTaoFormatted = DateTime.TryParse(dh.NgayBan, out ngay)
+                    ? ngay.ToString("dd-MM-yyyy HH:mm:ss")
+                    : "";
 
                 result.Add(new
                 {
                     MaDH = dh.MaDH,
-                    NgayBan = dh.NgayBan,
+                    NgayBan = ngay,
                     TenKH = kh != null ? kh.TenKH : "Không rõ",
                     SoLuongMatHang = soLuongMatHang,
                     TongTien = tongTien
@@ -104,7 +107,7 @@ namespace BusinessLogic
                 result.Add(new
                 {
                     MaDonHang = dh.MaDH,
-                    NgayTao = dh.NgayBan,
+                    NgayTao = DateTime.TryParse(dh.NgayBan, out DateTime ngay) ? ngay.ToString("dd-MM-yyyy") : "",
                     SoLuongMatHang = soLuongMatHang,
                     TongTien = tongTien
                 });

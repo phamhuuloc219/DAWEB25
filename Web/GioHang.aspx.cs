@@ -84,7 +84,6 @@ namespace Web
             }
 
             Session["GioHang"] = gioHang;
-            Response.Redirect(Request.RawUrl);
             LoadGioHang();
         }
 

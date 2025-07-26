@@ -82,10 +82,10 @@ namespace Web
 
                 int tongSoLuong = gioHang.Sum(x => x.SoLuong);
                 string script = $@"
-            document.getElementById('cartCount').innerText = '{tongSoLuong}';
-            document.getElementById('cartCount').style.display = '{(tongSoLuong > 0 ? "inline-block" : "none")}';
-            toastr.success('Đã thêm vào giỏ hàng!');
-        ";
+                    document.getElementById('cartCount').innerText = '{tongSoLuong}';
+                    document.getElementById('cartCount').style.display = '{(tongSoLuong > 0 ? "inline-block" : "none")}';
+                    toastr.success('Đã thêm vào giỏ hàng!');
+                ";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "updateCart", script, true);
             }
         }
