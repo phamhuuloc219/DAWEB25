@@ -59,9 +59,12 @@ namespace Web
                 LoadMatHang(null);
         }
 
-        protected void ThemVaoGio_Command(object sender, CommandEventArgs e)
+        protected void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if (Guid.TryParse(e.CommandArgument.ToString(), out Guid maMH))
+            LinkButton btn = sender as LinkButton;
+            if (btn == null || string.IsNullOrEmpty(btn.CommandArgument)) return;
+
+            if (Guid.TryParse(btn.CommandArgument, out Guid maMH))
             {
                 List<CartItem> gioHang = Session["GioHang"] as List<CartItem> ?? new List<CartItem>();
 
@@ -76,16 +79,16 @@ namespace Web
                 }
 
                 Session["GioHang"] = gioHang;
+
                 int tongSoLuong = gioHang.Sum(x => x.SoLuong);
                 string script = $@"
-                    document.getElementById('cartCount').innerText = '{tongSoLuong}';
-                    document.getElementById('cartCount').style.display = '{(tongSoLuong > 0 ? "inline-block" : "none")}';
-                    toastr.success('Đã thêm vào giỏ hàng!');
-                ";
+            document.getElementById('cartCount').innerText = '{tongSoLuong}';
+            document.getElementById('cartCount').style.display = '{(tongSoLuong > 0 ? "inline-block" : "none")}';
+            toastr.success('Đã thêm vào giỏ hàng!');
+        ";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "updateCart", script, true);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "testLog", "console.log('Script chạy');", true);
-
             }
         }
+
     }
 }
